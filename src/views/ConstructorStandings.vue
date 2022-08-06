@@ -4,10 +4,9 @@
         <h1 class="pb-5 text-center text-6xl">F1 Teams 2022 Standings</h1>
         <p class="">Discover everything you need to know about this year's Formula 1 teams - drivers, podium finishes, points earned and championship titles.</p>
       </div>
-      
       <div class="p-5">
         <div class="grid grid-cols-2 p-10 gap-20">
-            <div v-for="constructor in constructors" :key="constructor.position" class="p-10 text-center border-t-2 border-r-2 border-l-2 rounded-t-md border-dark hover:scale-105 duration-300">
+            <div v-for="constructor in constructors" :key="constructor.position" class="p-10 text-center border-t-2 border-r-2 border-l-2 rounded-t-md border-dark hover:scale-105 duration-300" :class="getTeamColorHover(constructor.Constructor.constructorId)">
               <div class="flex justify-around pb-3 gap-48 border-b border-dark">
                 <h5 class=" text-5xl">{{ "P" + constructor.position }}</h5>
                 <div>
@@ -37,7 +36,7 @@
 </template>
 <script>
 import API from '../logic/constructor'
-import { getTeamColor } from '../logic/teamColor'
+import { getTeamColor, getTeamColorHover } from '../logic/teamColor'
 import { getTeamDriver } from '../logic/teamDriver'
 
 export default{
@@ -64,6 +63,7 @@ export default{
       return ('src/assets/images/logos/'+logo+'.svg')
     },
     getTeamColor,
+    getTeamColorHover,
     getTeamDriver,
   }
 }

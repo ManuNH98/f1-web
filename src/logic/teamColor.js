@@ -22,3 +22,53 @@ export const getTeamColor = (team) => {
       return "border-williams";
   }
 };
+
+export const getTeamColorBg = (team) => {
+  switch (team) {
+    case "red_bull":
+      return "bg-red_bull";
+    case "ferrari":
+      return "bg-ferrari";
+    case "mercedes":
+      return "bg-mercedes";
+    case "alpine":
+      return "bg-alpine";
+    case "mclaren":
+      return "bg-mclaren";
+    case "alfa":
+      return "bg-alfa";
+    case "haas":
+      return "bg-haas";
+    case "alphatauri":
+      return "bg-alphatauri";
+    case "aston_martin":
+      return "bg-aston_martin";
+    case "williams":
+      return "bg-williams";
+  }
+};
+
+export const getTeamColorHover = (team) => {
+  switch (team) {
+    case "red_bull":
+      return "hover:border-red_bull";
+    case "ferrari":
+      return "hover:border-ferrari";
+    case "mercedes":
+      return "hover:border-mercedes";
+    case "alpine":
+      return "hover:border-alpine";
+    case "mclaren":
+      return "hover:border-mclaren";
+    case "alfa":
+      return "hover:border-alfa";
+    case "haas":
+      return "hover:border-haas";
+    case "alphatauri":
+      return "hover:border-alphatauri";
+    case "aston_martin":
+      return "hover:border-aston_martin";
+    case "williams":
+      return "hover:border-williams";
+  }
+};
