@@ -1,5 +1,5 @@
 <template>
-    <nav class="text-white w-full fixed">
+    <nav class="text-white w-full fixed tracking-wider z-50">
         <div class="flex justify-between items-center p-5 bg-primary">
             <router-link to="/">
                 <p class="text-3xl">F1 STATS</p>

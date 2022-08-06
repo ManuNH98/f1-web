@@ -1,28 +1,14 @@
 <template>
-    <div id="app" class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Driver Standings</h1>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Driver</th>
-                            <th>Points</th>
-                            <th>Wins</th>
-                            <th>Team</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="driver in drivers" :key="driver.position">
-                            <td>{{ driver.Driver.givenName }} {{driver.Driver.familyName}}</td>
-                            <td>{{ driver.points }}</td>
-                            <td>{{ driver.wins }}</td>
-                            <td>{{ driver.Constructors[0].name }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <div class="p-5">
+      <h1 class="text-center text-4xl">Driver Standings</h1>
+      <div class="grid grid-cols-3 gap-5">
+          <div v-for="driver in drivers" :key="driver.position" class="p-5 text-white text-center bg-dark">
+            <h5 class="card-title">{{ driver.Driver.givenName }} {{driver.Driver.familyName}}</h5>
+            <p class="card-text">{{ driver.points }}</p>
+            <p class="card-text">{{ driver.wins }}</p>
+            <p class="card-text">{{ driver.Constructors[0].name }}</p>
+          </div>
+      </div>
     </div>
 </template>
 <script>
