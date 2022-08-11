@@ -51,24 +51,24 @@ export const getTeamColorBg = (team) => {
 export const getTeamColorHover = (team) => {
   switch (team) {
     case "red_bull":
-      return "hover:border-red_bull";
+      return "hover:border-red_bull dark:hover:border-red_bull";
     case "ferrari":
-      return "hover:border-ferrari";
+      return "hover:border-ferrari dark:hover:border-ferrari";
     case "mercedes":
-      return "hover:border-mercedes";
+      return "hover:border-mercedes dark:hover:border-mercedes";
     case "alpine":
-      return "hover:border-alpine";
+      return "hover:border-alpine dark:hover:border-alpine";
     case "mclaren":
-      return "hover:border-mclaren";
+      return "hover:border-mclaren dark:hover:border-mclaren";
     case "alfa":
-      return "hover:border-alfa";
+      return "hover:border-alfa dark:hover:border-alfa";
     case "haas":
-      return "hover:border-haas";
+      return "hover:border-haas dark:hover:border-haas";
     case "alphatauri":
-      return "hover:border-alphatauri";
+      return "hover:border-alphatauri dark:hover:border-alphatauri";
     case "aston_martin":
-      return "hover:border-aston_martin";
+      return "hover:border-aston_martin dark:hover:border-aston_martin";
     case "williams":
-      return "hover:border-williams";
+      return "hover:border-williams dark:hover:border-williams";
   }
 };

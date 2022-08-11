@@ -1,7 +1,9 @@
 <template>
-  <Navbar/>
-  <router-view class="pt-28 p-10"></router-view>
-  <Footer/>
+  <div id="app">
+    <Navbar/>
+    <router-view class="pt-28 p-10"></router-view>
+    <Footer/>
+  </div>
 </template>
 
 <script>
@@ -10,7 +12,12 @@ import Footer from './components/Footer.vue'
 
 export default({
   name: 'App',
-  components: {Navbar, Footer}
+  components: {Navbar, Footer},
+  data() {
+    return {
+      isDark: false
+    }
+  },
 })
 </script>
 

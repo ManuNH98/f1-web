@@ -1,13 +1,13 @@
 <template>
-    <div class="p-10">
+    <div class="dark:bg-dark dark:text-white p-10">
       <div class="border-t-8 border-l-8 border-r-8 rounded-md p-5">
         <h1 class="pb-5 text-center text-6xl">F1 Drivers 2022 Standings</h1>
         <p class="">Check out this season's official F1 line-up. Full breakdown of drivers, points and current positions. Follow your favourite F1 drivers on and off the track.</p>
       </div>
       <div class="p-5">
         <div class="grid grid-cols-3 gap-10">
-            <div v-for="driver in drivers" :key="driver.position" class="pt-10 pr-7 pl-7  text-center border-t-2 border-r-2 border-l-2 rounded-t-md border-dark hover:scale-105 duration-300" :class="getTeamColorHover(driver.Constructors[0].constructorId)">
-              <div class="flex justify-around pb-3 gap-36 border-b border-dark">
+            <div v-for="driver in drivers" :key="driver.position" class="pt-10 pr-7 pl-7 text-center border-t-2 border-r-2 border-l-2 rounded-t-md dark:border-white hover:scale-105 duration-300" :class="getTeamColorHover(driver.Constructors[0].constructorId)">
+              <div class="flex justify-around pb-3 gap-36 border-b dark:border-b-white border-dark">
                 <h5 class="text-5xl">{{'P' + driver.position }}</h5>
                 <div>
                   <p class="text-3xl">{{ driver.wins }}</p>
@@ -18,9 +18,9 @@
                   <p class="text-xl">Pts</p>
                 </div>
               </div>
-              <div class="flex justify-around items-center pb-3 pt-3 gap-11 border-b border-dark">
+              <div class="flex justify-around items-center pb-3 pt-3 gap-11 border-b dark:border-white ">
                 <p :class="getTeamColor(driver.Constructors[0].constructorId)" class="border-l-4 px-2 text-3xl" >{{ driver.Driver.givenName }} {{ driver.Driver.familyName }}</p>
-                <img :src="getDriverNumber(driver.Driver.driverId)" class="w-16 h-10">
+                <img :src="getDriverNumber(driver.Driver.driverId)" class="dark:bg-white dark:rounded-md w-16 h-10">
                 <img :src="getDriverFlag(driver.Driver.nationality)" class="w-12 h-9">
               </div>
               <div class="pb-3 pl-3 mt-4 border-r-2 border-b-2 rounded-br-md">

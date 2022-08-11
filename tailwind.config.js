@@ -12,7 +12,7 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      white: "#ffffff",
+      white: "#fafafa",
       dark: "#202124",
       primary: "#E10600",
       red_bull: "#3671C6",

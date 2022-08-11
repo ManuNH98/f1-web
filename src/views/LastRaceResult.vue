@@ -1,11 +1,11 @@
 <template>
-    <div class="p-10">
+    <div class="dark:bg-dark dark:text-white p-10">
       <div class="border-t-8 border-l-8 border-r-8 rounded-md p-5">
         <h1 class="pb-5 text-center text-6xl">F1 2022 - Last Race Result</h1>
         <p class="">Check out the last race results.</p>
       </div>
       <div class="mt-5 px-28 border-4 rounded-md">
-        <div class="flex justify-between p-10 pb-2 border-b-2 border-dark">
+        <div class="flex justify-between p-10 pb-2 border-b-2 ">
           <div class="flex justify-center items-center gap-10">
             <img src="../assets/f1_logo.svg" alt="logo" class="w-32 h-auto">
             <h5 class="text-2xl">Race Results</h5>
@@ -27,8 +27,8 @@
                 <th></th>
               </tr>
               <tr v-for="lastResult in lastResults" :key="lastResult">
-                <td class="columns-1 bg-white text-center pr-1 py-0.5">
-                  <p class="border rounded-br-md">{{ lastResult.position }}</p>
+                <td class="columns-1 text-center pr-1 py-0.5">
+                  <p class="bg-white border rounded-br-md text-dark">{{ lastResult.position }}</p>
                 </td>
                 <td class="columns-2 pl-1">
                   <p :class="getTeamColor(lastResult.Constructor.constructorId)" class="uppercase border-l-8 pl-1">{{ lastResult.Driver.familyName }}</p>
