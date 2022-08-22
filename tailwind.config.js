@@ -1,0 +1,32 @@
+module.exports = {
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  darkMode: "class",
+  theme: {
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#fafafa",
+      dark: "#202124",
+      primary: "#E10600",
+      red_bull: "#3671C6",
+      ferrari: "#F91536",
+      mercedes: "#6CD3BF",
+      alpine: "#2293D1",
+      mclaren: "#F58020",
+      alfa: "#C92D4B",
+      haas: "#B6BABD",
+      alphatauri: "#5E8FAA",
+      aston_martin: "#358C75",
+      williams: "#37BEDD",
+    },
+    extend: {},
+  },
+  plugins: [],
+};
