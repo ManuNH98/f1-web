@@ -26,7 +26,7 @@
                 <p v-html="getTeamDriver(constructor.Constructor.constructorId, 1)" class="text-2xl"></p>
                 <p v-html="getTeamDriver(constructor.Constructor.constructorId, 2)" class="text-2xl"></p>
               </div>
-              <div>
+              <div :class="getTeamColorBg(constructor.Constructor.constructorId)" class="flex justify-center items-center mt-4 rounded-md">
                 <img :src="getTeamUrl(constructor.Constructor.constructorId)" class="w-full h-auto">
               </div>
             </div>
@@ -36,7 +36,7 @@
 </template>
 <script>
 import API from '../logic/constructor'
-import { getTeamColor, getTeamColorHover } from '../logic/teamColor'
+import { getTeamColor, getTeamColorHover, getTeamColorBg } from '../logic/teamColor'
 import { getTeamDriver } from '../logic/teamDriver'
 
 export default{
@@ -65,6 +65,7 @@ export default{
     getTeamColor,
     getTeamColorHover,
     getTeamDriver,
+    getTeamColorBg
   }
 }
 </script>
