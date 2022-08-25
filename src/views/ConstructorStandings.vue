@@ -7,6 +7,7 @@
       <div class="p-5">
         <div class="grid grid-cols-2 p-10 gap-20">
             <div v-for="constructor in constructors" :key="constructor.position" class="p-10 text-center border-t-2 border-r-2 border-l-2 rounded-t-md hover:scale-105 duration-300" :class="getTeamColorHover(constructor.Constructor.constructorId)">
+            <router-link :to="{ name: 'Constructor-Details', params: {id: constructor.Constructor.constructorId}}">
               <div class="flex justify-around pb-3 gap-48 border-b">
                 <h5 class=" text-5xl">{{ "P" + constructor.position }}</h5>
                 <div>
@@ -29,6 +30,7 @@
               <div :class="getTeamColorBg(constructor.Constructor.constructorId)" class="flex justify-center items-center mt-4 rounded-md">
                 <img :src="getTeamUrl(constructor.Constructor.constructorId)" class="w-full h-auto">
               </div>
+            </router-link>
             </div>
         </div>
       </div>

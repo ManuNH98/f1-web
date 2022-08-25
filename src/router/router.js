@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import Home from "../views/Home.vue";
 import DriverStandings from "../views/DriverStandings.vue";
 import DriverDetails from "../views/DriverDetails.vue";
 import ConstructorStandings from "../views/ConstructorStandings.vue";
@@ -10,12 +11,18 @@ import RaceDetails from "../views/RaceDetails.vue";
 const routes = [
   {
     path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/driver-standings",
     name: "Driver-Standings",
     component: DriverStandings,
   },
   {
-    path: "/:id",
+    path: "/driver-detail/:id",
     name: "Driver-Details",
+    props: true,
     component: DriverDetails,
   },
   {
@@ -26,6 +33,7 @@ const routes = [
   {
     path: "/constructor-standings/:id",
     name: "Constructor-Details",
+    props: true,
     component: ConstructorDetails,
   },
   {

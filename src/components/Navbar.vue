@@ -7,8 +7,8 @@
             <div class="flex justify-between gap-6">
                 <div @click="isDarkMode = !isDarkMode" class="flex justify-center items-center">
                     <button @click="toggleDarkMode()">
-                        <img v-if="isDarkMode" class="w-8 h-8" src="../assets/light-mode.svg">
-                        <img v-else class="w-8 h-8" src="../assets/dark-mode.svg">
+                        <img v-if="isDarkMode" class="w-8 h-8" src="../assets/dark-mode.svg">
+                        <img v-else class="w-8 h-8" src="../assets/light-mode.svg">
                     </button> 
                 </div>
                 
@@ -22,11 +22,13 @@
             </div>
         </div>
         <!-- Menu Options-->
-        <div v-if="!isOpen" class="flex flex-col items-center p-10 h-screen justify-center bg-primary">
-            <div v-for="option in options" :key="option" class="p-16">
-                <router-link v-on:click="closeMenu" :to="option.url" class="flex">
-                    <img :src="option.icon" :alt="option.alt" class="h-20 w-20">
-                    <p class="text-7xl">{{option.title}}</p>
+        <div v-if="!isOpen" class="flex flex-col items-center h-screen justify-center bg-primary">
+            <div v-for="option in options" :key="option" class="p-12">
+                <router-link v-on:click="closeMenu" :to="option.url">
+                    <div class="flex justify-center items-center gap-2">
+                        <img :src="option.icon" :alt="option.alt" class="h-20 w-20">
+                        <p class="text-7xl">{{option.title}}</p>
+                    </div> 
                 </router-link>
             </div>
         </div> 
@@ -45,7 +47,7 @@ export default {
                 {
                     title: 'Driver Standings',
                     icon: 'src/assets/driver.png',
-                    url: '/',
+                    url: '/driver-standings',
                     alt: 'Driver Standings'
                 },
                 {
@@ -59,6 +61,12 @@ export default {
                     icon: 'src/assets/result.png',
                     url: '/last-results',
                     alt: 'Last Result'
+                },
+                {
+                    title: 'Calendar',
+                    icon: 'src/assets/result.png',
+                    url: '/calendar',
+                    alt: 'Calendar'
                 }
             ]
         }

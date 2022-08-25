@@ -4,13 +4,16 @@
             <div class="menu">
                 <ul class="text-xl">
                     <li class="py-2">
-                        <router-link to="/">Driver Standings</router-link>
+                        <router-link to="/driver-standings">Driver Standings</router-link>
                     </li>
                     <li class="py-2">
                         <router-link to="/constructor-standings">Constructor Standings</router-link>
                     </li>
                     <li class="py-2">
                         <router-link to="/last-results">Last Result</router-link>
+                    </li>
+                    <li class="py-2">
+                        <router-link to="/calendar">Calendar</router-link>
                     </li>
                 </ul>
             </div>
@@ -36,10 +39,5 @@
 <script>
 export default {
     name: 'Footer',
-    data() {
-        return {
-            
-        }
-    },
 }
 </script>
