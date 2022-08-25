@@ -1,7 +1,7 @@
 <template>
     <div class="dark:bg-dark dark:text-white p-10">
       <div class="border-t-8 border-l-8 border-r-8 rounded-md p-5">
-        <h1 class="pb-5 text-center text-6xl">F1 Drivers 2022 Standings</h1>
+        <h1 class="pb-5 text-center text-6xl">F1 2022 - Driver Standings</h1>
         <p class="">Check out this season's official F1 line-up. Full breakdown of drivers, points and current positions. Follow your favourite F1 drivers on and off the track.</p>
       </div>
       <div class="p-5">

@@ -1,12 +1,12 @@
 <template>
     <div class="dark:bg-dark dark:text-white p-10">
       <div class="border-t-8 border-l-8 border-r-8 rounded-md p-5">
-        <h1 class="pb-5 text-center text-6xl">F1 Teams 2022 Standings</h1>
+        <h1 class="pb-5 text-center text-6xl">F1 2022 Team Standings</h1>
         <p class="">Discover everything you need to know about this year's Formula 1 teams - drivers, podium finishes, points earned and championship titles.</p>
       </div>
       <div class="p-5">
         <div class="grid grid-cols-2 p-10 gap-20">
-            <div v-for="constructor in constructors" :key="constructor.position" class="p-10 text-center border-t-2 border-r-2 border-l-2 rounded-t-md hover:scale-105 duration-300" :class="getTeamColorHover(constructor.Constructor.constructorId)">
+            <div v-for="(constructor, id) in constructors" :key="id" class="p-10 text-center border-t-2 border-r-2 border-l-2 rounded-t-md hover:scale-105 duration-300" :class="getTeamColorHover(constructor.Constructor.constructorId)">
             <router-link :to="{ name: 'Constructor-Details', params: {id: constructor.Constructor.constructorId}}">
               <div class="flex justify-around pb-3 gap-48 border-b">
                 <h5 class=" text-5xl">{{ "P" + constructor.position }}</h5>
