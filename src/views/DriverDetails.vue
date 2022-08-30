@@ -29,7 +29,6 @@ export default{
             API_DRIVER.getDriver(this.driver)
             .then(res => {
                 this.driverDetail = res.data.MRData.DriverTable.Drivers[0]
-                console.log(this.driverDetail)
             })
         },
     }

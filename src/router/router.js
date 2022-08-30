@@ -49,6 +49,7 @@ const routes = [
   {
     path: "/calendar/:id",
     name: "Race-Details",
+    props: true,
     component: RaceDetails,
   },
 ];
